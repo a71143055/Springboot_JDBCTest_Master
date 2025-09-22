@@ -14,7 +14,7 @@
             <th>이름</th>
             <th>가격</th>
         </tr>
-        <tr th:each="product : ${products}">
+        <tr th:each="product : ${productList}">
             <td th:text="${product.id}"></td>
             <td th:text="${product.name}"></td>
             <td th:text="${product.price}"></td>
@@ -29,7 +29,7 @@
             <th>높이</th>
             <th>너비</th>
         </tr>
-        <tr th:each="detail : ${detailList}">
+        <tr th:each="detail : ${details}">
             <td th:text="${detail.id}"></td>
             <td th:text="${detail.description}"></td>
             <td th:text="${detail.weight}"></td>

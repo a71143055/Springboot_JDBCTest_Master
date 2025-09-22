@@ -33,10 +33,10 @@ public class Example06Controller {
         detailRepository.save(detail);
         product.setDetail(detail);
         productRepository.save(product);
-        Iterable<Product> products = productRepository.findAll();
-        Iterable<Detail> detailList = detailRepository.findAll();
-        model.addAttribute("products",products);
-        model.addAttribute("detailList",detailList);
+        Iterable<Product> productList = productRepository.findAll();
+        Iterable<Detail> details = detailRepository.findAll();
+        model.addAttribute("productList",productList);
+        model.addAttribute("details",details);
         return "viewPage06";
     }
 }
