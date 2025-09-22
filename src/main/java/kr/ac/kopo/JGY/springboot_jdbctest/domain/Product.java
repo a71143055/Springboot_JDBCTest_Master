@@ -10,7 +10,7 @@ public class Product {
     private int id;
     private String name;
     private float price;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
     private Detail detail;
 }
