@@ -11,6 +11,6 @@ public class Product {
     private String name;
     private float price;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "detail_id")
+    @PrimaryKeyJoinColumn
     private Detail detail;
 }

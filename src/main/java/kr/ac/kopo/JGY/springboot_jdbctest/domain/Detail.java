@@ -1,9 +1,6 @@
 package kr.ac.kopo.JGY.springboot_jdbctest.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -16,4 +13,8 @@ public class Detail {
     private float weight;
     private float height;
     private float width;
+    @OneToOne
+    @JoinColumn(name = "product_id")
+    @MapsId
+    private Product product;
 }
