@@ -31,8 +31,8 @@ public class Example05Controller {
         detail.setWidth(75.9f);
         product.setDetail(detail);
         productRepository.save(product);
-        List<Product> products = productRepository.findAll();
-        List<Detail> detailList = detailRepository.findAll();
+        Iterable<Product> products = productRepository.findAll();
+        Iterable<Detail> detailList = detailRepository.findAll();
         model.addAttribute("products",products);
         model.addAttribute("detailList",detailList);
         return "viewPage05";
